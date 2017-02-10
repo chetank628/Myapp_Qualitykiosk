@@ -12,7 +12,7 @@
 
 
     <TextView
-        android:text="Hello world..!"
+        android:text="Hello world..I am robot!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="125dp"
