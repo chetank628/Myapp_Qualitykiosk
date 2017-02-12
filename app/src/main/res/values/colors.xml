@@ -3,4 +3,5 @@
     <color name="Primary">#4caf50</color>
     <color name="PrimaryDark">#388e3c</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="button_notfocus">#E4E7E9</color>
 </resources>

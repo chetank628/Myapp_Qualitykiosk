@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+ android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.qualitykiosk.myapp.MainActivity"
+    android:weightSum="1"
 
-    tools:context="com.qualitykiosk.myapp.MainActivity">
+    >
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+        <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/Primary"
@@ -18,7 +32,8 @@
         android:id="@+id/toolbar_top"
         android:layout_alignParentTop="true"
         android:elevation="5dp"
-   app:titleTextColor="@android:color/background_light">
+   app:titleTextColor="@android:color/background_light"
+            app:theme="@android:style/Theme.Material.Light.DarkActionBar">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,12 +41,122 @@
             android:text="Nice to see You BacK..!"
             android:layout_gravity="bottom|left"
             android:id="@+id/toolbar_title"
-            android:paddingBottom="20dp"
-            android:textSize="25sp"/>
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            />
+
+            <Spinner
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/spinner2"
+               android:background="@drawable/ic_more_vert_black_18dp"
+                android:backgroundTint="#FFFFFF"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="5dp"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="100dp"
+                />
 
         />
-
     </android.support.v7.widget.Toolbar>
 
+        <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/qualitykiosklogo"
+        android:id="@+id/imageView2"
+        android:paddingStart="20dp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+       >
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_account_circle_black_18dp"
+            android:drawableTint="@color/Primary"
+            android:maxLines="1"
+            android:hint="User Name"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="#E0E0E0"
+            android:id="@+id/editText" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="15dp"
+
+
+        >
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:drawableLeft="@drawable/ic_lock_black_18dp"
+            android:drawableTint="@color/Primary"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:id="@+id/editText5"
+           android:backgroundTint="#E0E0E0"
+
+            />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingStart="30dp"
+        android:text="  Or create a new Account"
+        android:textSize="20sp"
+        android:textColor="@color/PrimaryDark"
+        />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button1"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center|right"
+            android:text="Login"
+            android:textColor="@color/Primary"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_18dp"
+            android:elevation="10dp"
+            android:drawablePadding="5dp"
+            android:backgroundTint="@color/button_notfocus"
+
+            />
+
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
 
 </LinearLayout>
+

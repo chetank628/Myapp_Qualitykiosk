@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Myapp</string>
+    <string-array name="Spinner_selector">
+        <item>About Us</item>
+
+    </string-array>
+
 </resources>

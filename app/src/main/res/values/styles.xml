@@ -9,6 +9,12 @@
         <item name="android:colorPrimary">@color/Primary</item>
         <item name="android:actionBarSize">@dimen/bar_height</item>
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+
     </style>
+
+<style name="buttoncolor" parent="ThemeOverlay.AppCompat.Light">
+
+    <item name="android:colorAccent">@color/button_notfocus</item>
+</style>
 
 </resources>
