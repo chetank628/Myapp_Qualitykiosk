@@ -138,12 +138,19 @@
                 android:gravity="center|bottom"
                 android:orientation="vertical">
 
-                <android.support.design.widget.CoordinatorLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="normal"
+                    android:layout_gravity="end"
+                    app:elevation="12dp"
+                    app:borderWidth="0dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_add_white_48px"
+                    app:pressedTranslationZ="24dp"
 
-
-                </android.support.design.widget.CoordinatorLayout>
+                    />
 
 
 
