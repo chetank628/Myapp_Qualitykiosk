@@ -57,11 +57,11 @@
                     android:id="@+id/imagemenu"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:backgroundTint="@color/Primary"
-                    app:srcCompat="@drawable/ic_more_vert_white_18px"
                     android:layout_gravity="bottom|right"
                     android:layout_marginBottom="20dp"
                     android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/Primary"
+                    app:srcCompat="@drawable/ic_more_vert_white_18px"
 
                     />
 
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E0E0E0"
-                    android:drawableLeft="@drawable/ic_account_circle_black_18dp"
+                    android:drawableLeft="@drawable/ic_account_circle_black_24px"
                     android:drawableTint="@color/Primary"
                     android:hint="User Name"
                     android:inputType="textEmailAddress"
@@ -95,55 +95,54 @@
 
             </android.support.design.widget.TextInputLayout>
 
+
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
-                    <android.support.design.widget.TextInputLayout
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:paddingTop="15dp">
+
+
+                    <EditText
+
+                        android:id="@+id/editText5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_margin="30dp"
+                        android:layout_marginTop="16dp"
+
+                       android:backgroundTint="#E0E0E0"
+                        android:drawableLeft="@drawable/ic_lock_outline_black_24px"
+                        android:drawableTint="@color/Primary"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+
+                        android:maxLines="1" />
 
 
-                        android:paddingStart="30dp"
-                        android:paddingTop="15dp">
+                </android.support.design.widget.TextInputLayout>
 
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                        <EditText
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="38dp"
+                   android:paddingTop="20dp"
 
-                            android:id="@+id/editText5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:backgroundTint="#E0E0E0"
-                            android:drawableLeft="@drawable/ic_lock_black_18dp"
-                            android:drawableTint="@color/Primary"
-                            android:hint="Password"
-                            android:inputType="textPassword"
-                            android:maxLines="1"
+                    android:src="@drawable/ic_visibility_black_24px" />
 
-                            />
-
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center|end"
-
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_visibility_black_24px" />
-
-
-                    </android.support.design.widget.TextInputLayout>
-
-                </FrameLayout>
             </RelativeLayout>
 
 
@@ -166,6 +165,7 @@
 
 
                 <Button
+
                     android:id="@+id/button1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -174,6 +174,7 @@
                     android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_18dp"
                     android:drawablePadding="5dp"
                     android:elevation="10dp"
+
                     android:gravity="center|right"
                     android:text="Login"
                     android:textColor="@color/Primary"
