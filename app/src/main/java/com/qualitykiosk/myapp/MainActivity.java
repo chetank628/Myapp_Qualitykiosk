@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         showpasss.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void  (View view) {
                 EditText paswword = (EditText) findViewById(R.id.et_password);
                 if (passwordNotVisible == 1) {
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);

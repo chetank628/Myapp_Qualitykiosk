@@ -6,17 +6,14 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
- android:orientation="vertical"
+    android:orientation="vertical"
     android:background="#FFFFFF"
     tools:context="com.qualitykiosk.myapp.MainActivity"
     android:weightSum="1"
 
     >
 
-    <ExpandableListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+
 
     <ScrollView
         android:layout_width="fill_parent"
