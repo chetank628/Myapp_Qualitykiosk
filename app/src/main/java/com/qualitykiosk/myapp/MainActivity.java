@@ -1,5 +1,6 @@
 package com.qualitykiosk.myapp;
 
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
-        ImageView showpasss = (ImageView) findViewById(R.id.iv_showpaasw);
+        final ImageView showpasss = (ImageView) findViewById(R.id.iv_showpaasw);
 
         imagemenus = (ImageButton) findViewById(R.id.imagemenu);
         imagemenus.setOnClickListener(new View.OnClickListener() {
@@ -46,11 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         showpasss.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void  (View view) {
+            public void onClick(View view) {
                 EditText paswword = (EditText) findViewById(R.id.et_password);
                 if (passwordNotVisible == 1) {
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     passwordNotVisible = 0;
+                    AnimatedVectorDrawable showpwd= (AnimatedVectorDrawable) getDrawable(R.drawable.avd_show_to_disable);
+                    showpasss.setImageDrawable(showpwd);
+
                 } else {
 
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT |InputType.TYPE_TEXT_VARIATION_PASSWORD);
