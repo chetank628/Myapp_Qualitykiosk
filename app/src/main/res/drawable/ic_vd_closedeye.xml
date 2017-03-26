@@ -1,14 +1,14 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:tint="?attr/colorControlNormal"
+    android:tint="@color/Primary"
     android:viewportHeight="24"
     android:viewportWidth="24">
 
     <path
         android:name="strike_through"
         android:pathData="@string/path_password_strike_through"
-        android:strokeColor="@android:color/white"
+        android:strokeColor="@color/Primary"
         android:strokeLineCap="square"
         android:strokeWidth="1.8"/>
 
@@ -18,7 +18,7 @@
             android:pathData="@string/path_password_eye_mask_strike_through"/>
         <path
             android:name="eye"
-            android:fillColor="@android:color/white"
+            android:fillColor="@color/Primary"
             android:pathData="@string/path_password_eye"/>
     </group>
 </vector>
