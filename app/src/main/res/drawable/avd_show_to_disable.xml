@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector android:drawable="@drawable/ic_visibility_off_black_24px"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<animated-vector android:drawable="@drawable/ic_vd_closedeye"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
     <target
-        android:name="hide"
+        android:name="eye_mask"
         android:animation="@animator/show_disable"
 
         />
+    <target android:name="strike_through">
+    <aapt:attr name="android:animation">
+        <objectAnimator
+            android:duration="@integer/hide_password_duration"
+            android:interpolator="@android:interpolator/fast_out_slow_in"
+            android:propertyName="trimPathEnd"
+            android:valueFrom="1"
+            android:valueTo="0"/>
+    </aapt:attr>
+</target>
+
     </animated-vector>

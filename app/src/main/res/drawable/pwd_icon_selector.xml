@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_vd_visibility_black_24px" android:state_activated="true"/>
+    <item android:drawable="@drawable/ic_vd_visibility_off_black_24px"/>
+</selector>
