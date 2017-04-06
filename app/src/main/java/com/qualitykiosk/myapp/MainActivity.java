@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
-        final ImageView showpasss = (ImageView) findViewById(R.id.iv_showpaasw);
+        final ImageView showpass = (ImageView) findViewById(R.id.iv_showpaasw);
 
         imagemenus = (ImageButton) findViewById(R.id.imagemenu);
         imagemenus.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        showpasss.setOnClickListener(new View.OnClickListener() {
+        showpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 view.setActivated(!view.isActivated());
@@ -54,11 +54,18 @@ public class MainActivity extends AppCompatActivity {
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     passwordNotVisible = 0;
 
+                    AnimatedVectorDrawable showpwd= (AnimatedVectorDrawable) getDrawable(R.drawable.avd_show_to_disable);
+                    showpass.setImageDrawable(showpwd);
+                    showpwd.start();
+
 
                 } else {
 
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT |InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     passwordNotVisible = 1;
+                    AnimatedVectorDrawable hidepwd= (AnimatedVectorDrawable) getDrawable(R.drawable.avd_trimclip_eye_visible_to_masked);
+                    showpass.setImageDrawable( hidepwd);
+                    hidepwd.start();
                 }
 
 
