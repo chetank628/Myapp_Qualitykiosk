@@ -28,8 +28,8 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar_top"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="408dp"
+                android:layout_height="196dp"
                 android:layout_alignParentTop="true"
                 android:background="@color/Primary"
                 android:elevation="5dp"

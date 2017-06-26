@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Myapp.iml" filepath="$PROJECT_DIR$/Myapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Myapp_Qualitykiosk.iml" filepath="$PROJECT_DIR$/Myapp_Qualitykiosk.iml" />
+      <module fileurl="file://C:\Users\chetan\AndroidStudioProjects\Myapp\Myapp_Qualitykiosk.iml" filepath="C:\Users\chetan\AndroidStudioProjects\Myapp\Myapp_Qualitykiosk.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
