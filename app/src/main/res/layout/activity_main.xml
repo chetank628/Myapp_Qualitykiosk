@@ -28,7 +28,7 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar_top"
-                android:layout_width="408dp"
+                android:layout_width="match_parent"
                 android:layout_height="196dp"
                 android:layout_alignParentTop="true"
                 android:background="@color/Primary"
@@ -161,10 +161,17 @@
                 android:gravity="center|bottom"
                 android:orientation="vertical">
 
+                <ProgressBar
+                    android:id="@+id/pb_loading_indicator"
+                    android:layout_height="42dp"
+                    android:layout_width="42dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+            </LinearLayout>
 
                 <Button
 
-                    android:id="@+id/button1"
+                    android:id="@+id/Login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -180,9 +187,13 @@
                     />
 
 
-            </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
+
+
+
 
 </LinearLayout>
 
