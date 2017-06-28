@@ -4,4 +4,5 @@
     <color name="PrimaryDark">#388e3c</color>
     <color name="colorAccent">#FF4081</color>
     <color name="button_notfocus">#E4E7E9</color>
+    <color name="sa_green_transparent">#4caf50</color>
 </resources>
