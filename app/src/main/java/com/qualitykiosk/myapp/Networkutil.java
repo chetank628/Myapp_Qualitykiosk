@@ -15,12 +15,12 @@ import java.util.Scanner;
 
 public class Networkutil {
 
-    public static URL buildUrl() {
+    public static URL buildUrl(String start, String stop) {
 
 
         URL url = null;
         try {
-            url = new URL("http://35.186.159.203:8733/IRestWCFServiceLibrary/startest/true/stoptest/false/reference/457");
+            url = new URL("http://35.186.159.203:8733/IRestWCFServiceLibrary/startest/"+start+"/stoptest/"+stop+"/reference/457");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

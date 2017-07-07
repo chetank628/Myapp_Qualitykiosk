@@ -181,7 +181,7 @@
                     android:elevation="10dp"
 
                     android:gravity="center|right"
-                    android:text="Login"
+                    android:text="Start Loadtest"
                     android:textColor="@color/Primary"
                     android:background="@drawable/ripple_rectangle"
 

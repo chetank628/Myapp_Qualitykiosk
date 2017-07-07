@@ -1,8 +1,10 @@
 package com.qualitykiosk.myapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.AsyncTask;
+import android.provider.AlarmClock;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
         final ImageView showpasss = (ImageView) findViewById(R.id.iv_showpaasw);
@@ -49,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         imagemenus = (ImageButton) findViewById(R.id.imagemenu);
+        Intent intent = getIntent();
+
+
+
         imagemenus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,12 +77,17 @@ public class MainActivity extends AppCompatActivity {
                 if (passwordNotVisible == 1) {
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     passwordNotVisible = 0;
+                    AnimatedVectorDrawable showpwd= (AnimatedVectorDrawable) getDrawable(R.drawable.avd_show_to_disable);
+                                       showpasss.setImageDrawable(showpwd);
 
 
                 } else {
 
                     paswword.setInputType( InputType.TYPE_CLASS_TEXT |InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     passwordNotVisible = 1;
+                    AnimatedVectorDrawable showpwd= (AnimatedVectorDrawable) getDrawable(R.drawable.avd_trimclip_eye_visible_to_masked);
+                    showpasss.setImageDrawable(showpwd);
+
                 }
 
 
@@ -95,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void makeGithubSearchQuery() {
-        URL githubSearchUrl = Networkutil.buildUrl();
+        URL githubSearchUrl = Networkutil.buildUrl("true","false");
 
         new GithubQueryTask().execute(githubSearchUrl);
     }
@@ -105,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            mLoadingIndicator.setVisibility(View.VISIBLE);
+            // mLoadingIndicator.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -140,12 +153,17 @@ public class MainActivity extends AppCompatActivity {
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, Loadtesststartresult, duration);
                     toast.show();
+
+                    Intent intent= new Intent(context,Stoploadtestscreen.class);
+                    intent.putExtra("Loadtestscreen",Loadtesststartresult);
+                    startActivity(intent);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
                 // COMPLETED (16) Call showErrorMessage if the result is null in onPostExecute
-               // showErrorMessage();
+                // showErrorMessage();
             }
         }
     }
