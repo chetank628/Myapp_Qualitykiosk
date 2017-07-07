@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private int passwordNotVisible=1;
     private ProgressBar mLoadingIndicator;
     private Button Login;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -162,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             } else {
+
                 // COMPLETED (16) Call showErrorMessage if the result is null in onPostExecute
                 // showErrorMessage();
             }
